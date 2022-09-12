@@ -1,0 +1,114 @@
+/*css for game page*/
+* {
+    padding: 0;
+    margin: 0;
+   background-color: var(--black);
+}
+:root {
+    --black:#222222;
+    --white:#FFFFFF;
+    --gray: #999999;
+    --orange: #FF9D6C;
+  }
+.game {
+    width: 600px;
+    height: 240px;
+    border: 3px solid ;
+    margin: auto;
+    border-image-slice: 1;
+}
+.game-border{
+      border-image-source: linear-gradient(to right, #FF6EEB, #FF9D6C, #79FF6E, #6EFFFF, #D09DF2, #FF6EEB);
+}
+
+#rabbit {
+    width: 70px;
+    height: 70px;
+    background-image: url(rabbit.svg);
+    background-size: auto 70px;
+    position: relative;
+    top: 130px;
+    
+    transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.jump {
+    animation: jump 0.3s linear;
+}
+@keyframes jump {
+    0% {
+        top: 130px; /*distance from top of parent element*/
+    }
+    30% {
+        top: 115px;
+    }
+    50% {
+        top: 70px;
+    }
+    80% {
+        top: 115px;
+    }
+    100% {
+        top: 130px;
+    }
+}
+#rock {
+    width: 20px;
+    height: 40px;
+    position: relative;
+    top: 100px;
+    left: 580px; /*width of frame*/
+    background-image: url(rock\ \(5\).svg);
+    background-size: 20px 40px;
+    animation: rock-block 1.2s infinite linear;
+}
+@keyframes rock-block {
+    0% {
+        left: 600px;
+    }
+    100% {
+        left: -20px;
+    }
+}
+#carrotEarn {
+    font-family: Montserrat;
+    background: rgb(255,110,235);
+   background: linear-gradient(to right, #FF6EEB 0%, #FF9D6C 20%, #79FF6E 40%, #6EFFFF 60%, #D09DF2 80%, #FF6EEB 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+    text-align: center;
+    padding-top: 60px;
+    background-size: 10%;
+    font-size: large;
+    font-weight:bold;
+}
+#feedR {
+    color: var(--gray);
+    text-align: center;
+    padding-top: 90px;
+}
+
+/*carrot & points*/
+
+#carrot {
+    width: 20px;
+    height: 40px;
+    position: relative;
+    top: 120px;
+    left: 580px; /*width of frame*/
+    background-image: url(carrot.svg);
+    background-size: 20px 40px;
+    animation: rock-block 1.2s infinite linear;
+}
+
+#myScore{
+    text-align: center;
+    font-family: Montserrat;
+    background: rgb(255,110,235);
+   background: linear-gradient(to right, #FF6EEB 0%, #FF9D6C 20%, #79FF6E 40%, #6EFFFF 60%, #D09DF2 80%, #FF6EEB 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-size: medium;
+   background-size: 5%;
+   font-weight:bold;
+}

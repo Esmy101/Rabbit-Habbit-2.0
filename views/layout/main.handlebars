@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+  <link rel="stylesheet" type="text/css" href="css/game.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<header>
+  <nav>
+    <a class="nav-link" id="home" href="/">Home</a>
+    <a class="nav-link" href="/tasks">Tasks</a>
+    {{#if loggedIn}}
+    <a class="nav-link"  id="logout" href="/">Logout</a>
+    {{else}}
+    <a class="nav-link"  href="/login">Login</a>
+    {{/if}}
+    <a href="/game" class="register-btn"><img src="images\bunny-inverse-removebg-preview(2).png" alt="" class="top-bunny" id="bunny-btn"></a>
+  </nav>
+</header>
+
+<body>
+  <main>
+    <div>
+      {{{body}}}
+    </div>
+  </main>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
