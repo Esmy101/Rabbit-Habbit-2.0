@@ -24,7 +24,7 @@
 #rabbit {
     width: 70px;
     height: 70px;
-    background-image: url(/assets/rabbit.svg);
+    background-image: url(*/assets/rabbit.svg);
     background-size: auto 70px;
     position: relative;
     top: 130px;
