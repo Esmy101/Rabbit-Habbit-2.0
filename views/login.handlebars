@@ -4,20 +4,21 @@
 <div class="container">
   <form>
     <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label text-white">Username</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <label for="username" class="form-label text-white">Username</label>
+    <input type="username" class="form-control" id="username-input" aria-describedby="username" autocomplete="username">
   </div>
     <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label text-white">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label for="password" class="form-label text-white">Password</label>
+    <input type="password" class="form-control" id="password-input" autocomplete="current-password">
   </div>
     <div class="row">
       <div class="col-auto me-auto">
-        <button id="" class="btn btn-light btn-lg" type="submit">Login</button>
+        <button class="btn btn-light btn-lg" type="submit">Login</button>
       </div>
       <div class ="col-auto">
-        <button id="" class="btn btn-light">Signup</button>
+        <a href = "/signup">
+          <div class="btn btn-light">Signup</div>
+        </a>
       </div>
     </div>
   </form>
