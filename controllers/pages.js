@@ -46,8 +46,25 @@ router.get("/signup", (req, res) => {
 
 
 router.get("/game", (req, res) => {
-
-  res.render("game");
+  if (req.session.loggedIn) {
+    res.render("game",{
+      loggedIn: req.session.loggedIn,
+    });
+  }
+  else{
+    res.redirect("/login");
+  }
 });
+
+router.get("/tasks", (req, res) => {
+  if (req.session.loggedIn) {
+    res.render("tasks",{
+      loggedIn: req.session.loggedIn,
+    });
+  }
+  else{
+    res.redirect("/login");
+  }
+})
 
 module.exports = router;

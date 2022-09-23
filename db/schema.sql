@@ -6,7 +6,8 @@ USE habit_db;
 CREATE TABLE users(
     id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(255) NOT NULL,
-    user_password VARCHAR(255) NOT NULL
+    user_password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE
 );
 
 CREATE TABLE posts (
