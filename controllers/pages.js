@@ -58,7 +58,7 @@ router.get("/game", (req, res) => {
 
 router.get("/tasks", (req, res) => {
   if (req.session.loggedIn) {
-    res.render("tasks",{
+    res.render("user-homepage",{
       loggedIn: req.session.loggedIn,
     });
   }

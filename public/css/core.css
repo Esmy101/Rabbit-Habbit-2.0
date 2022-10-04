@@ -1,4 +1,4 @@
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,6 +10,7 @@
   --white:#FFFFFF;
   --gray: #999999;
   --orange: #FF9D6C;
+  --rainbow: linear-gradient(to right, #FF6EEB 0%, #FF9D6C 20%, #79FF6E 40%, #6EFFFF 60%, #D09DF2 80%, #FF6EEB 100%);
 }
 
 body {
@@ -53,7 +54,8 @@ a{
   color: white;
 }
 .nav-link:hover{
-  background: linear-gradient(to right, #FF6EEB 0%, #FF9D6C 20%, #79FF6E 40%, #6EFFFF 60%, #D09DF2 80%, #FF6EEB 100%);
+  background: var(--rainbow);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -72,7 +74,7 @@ a{
 }
 
 .gradient-color{
-  background: linear-gradient(to right, #FF6EEB 0%, #FF9D6C 20%, #79FF6E 40%, #6EFFFF 60%, #D09DF2 80%, #FF6EEB 100%);
+  background: var(--rainbow);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 22px;

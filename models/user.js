@@ -41,20 +41,22 @@ User.init(
         let password_regex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/
 
         email_valid = email_regex.test(newUserData.email)
-        password_valid = password_regex.test(newUserData.user_password)
+        password_valid = true
 
         let test_email = false
-        if (process.env.NODE_ENV === 'production') {
+        console.log(process.env.NODE_ENV)
+        if (process.env.NODE_ENV !== 'dev') {
           test_email = test_email_regex.test(newUserData.email)
+          password_valid = password_regex.test(newUserData.user_password)
         }
 
         if (test_email){
           throw new Error('test email used for production')
         }
-        if (!password_valid){
+        if (!email_valid){
           throw new Error('email invalid')
         }
-        if (!password_pass) {
+        if (!password_valid) {
           throw new Error('password to weak')
         }
 
